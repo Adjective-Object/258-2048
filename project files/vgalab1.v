@@ -211,28 +211,33 @@ module block(
 		if (x>x_off && y>y_off && x<x_off+dim && y<y_off+dim) begin
 			rx = x-x_off;
 			ry = y-y_off;
+			
+			pxout = 0;
+
 			if( (rx>radius & rx<dim-radius) || (ry>radius & ry<dim-radius) ) begin
 				//not corners
 				pxout <= value;
 			end
+
 			else if(rx < radius) begin
 				//left
 				if(ry<radius) begin
 					//topleft
+					if(rx>ry) pxout <=value;
 				end else begin
 					//bottomleft
+					if(rx<(ry-dim+radius)) pxout <=value;
 				end
 			end else begin
 				//right
 				if(ry<radius) begin
 					//topright
+					if(rx<ry-radius) pxout <= value;
 				end else begin
 					//bottomright
+					if(rx<(ry-dim+radius)) pxout <= value;
 				end
 			end
-		end else begin
-			pxout <= 0;
-		end
 	end
 
 endmodule

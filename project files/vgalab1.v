@@ -246,30 +246,64 @@ module color_blocker(
 		
 		always begin
 			case (color_class)
-				0:begin
-					v1= 10'h000;
-					v2= 10'h000;
-					v3= 10'h000;
+				0:begin					v1= 10'hbb;
+					v2= 10'had;
+					v3= 10'ha0;
 				end
 				1:begin
-					v1= 10'h000;
-					v2= 10'hFFF;
-					v3= 10'hFFF;
+					v1= 10'hee;
+					v2= 10'he4;
+					v3= 10'hda;
 				end
 				2:begin
-					v1= 10'hFFF;
-					v2= 10'h000;
-					v3= 10'hFFF;
+					v1= 10'hf2;
+					v2= 10'hb1;
+					v3= 10'h79;
 				end
 				3:begin
-					v1= 10'hFFF;
-					v2= 10'hFFF;
-					v3= 10'h000;
+					v1= 10'hf5;
+					v2= 10'h95;
+					v3= 10'h63;
 				end
 				4:begin
-					v1= 10'h000;
-					v2= 10'h000;
-					v3= 10'hFFF;
+					v1= 10'hf6;
+					v2= 10'h7c;
+					v3= 10'h5f;
+				end
+				5:begin
+					v1= 10'hf6;
+					v2= 10'h7c;
+					v3= 10'h5f;
+				end
+				6:begin
+					v1= 10'hf6;
+					v2= 10'h5e;
+					v3= 10'h3b;
+				end
+				7:begin
+					v1= 10'hed;
+					v2= 10'hcf;
+					v3= 10'h72;
+				end
+				8:begin
+					v1= 10'hed;
+					v2= 10'hcc;
+					v3= 10'h61;
+				end
+				9:begin
+					v1= 10'hed;
+					v2= 10'hc8;
+					v3= 10'h50;
+				end
+				10:begin
+					v1= 10'hed;
+					v2= 10'hc5;
+					v3= 10'h3f;
+				end
+				11:begin
+					v1= 10'hed;
+					v2= 10'hc2;
+					v3= 10'h2e;
 				end
 			endcase
 		end

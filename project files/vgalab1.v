@@ -40,9 +40,6 @@ assign RST = KEY[0];
 wire DLY_RST;
 Reset_Delay r0(	.iCLK(CLOCK_50),.oRESET(DLY_RST) );
 
-// Send switches to red leds 
-assign LEDR = SW;
-
 // Turn off green leds
 assign LEDG = 8'h00;
 
@@ -90,19 +87,30 @@ initial begin
 	repeat (4) begin
 		i_y = 0;
 		repeat (4) begin
-			datagrid[i_x][i_y][0] <= 1;
-			datagrid[i_x][i_y][1] <= 0;
-			datagrid[i_x][i_y][2] <= 0;
+			{datagrid[i_x][i_y][5],
+			datagrid[i_x][i_y][4],
+			datagrid[i_x][i_y][3],
+			datagrid[i_x][i_y][2],
+			datagrid[i_x][i_y][1],
+			datagrid[i_x][i_y][0]} <= 2;
 			i_y = i_y + 1;
 		end
 		i_x = i_x + 1;
 	end
 end
 
+assign LEDR[5:0] = {datagrid[i_x][i_y][5],
+			datagrid[i_x][i_y][4],
+			datagrid[i_x][i_y][3],
+			datagrid[i_x][i_y][2],
+			datagrid[i_x][i_y][1],
+			datagrid[i_x][i_y][0]};
+			
 parameter blockdim = 64;
 parameter margins = 10;
 parameter xoff = 40;
 parameter yoff = 0;
+parameter rectangle_radius = 3;
 
 genvar i;
 generate
@@ -113,9 +121,14 @@ for(i=0; i<16; i=i+1) begin:blockgen
 		
 		yoff + margins + (blockdim + margins)*(i%4),
 		
-		blockdim,
+		blockdim, rectangle_radius,
 		
-		1,
+		{datagrid[i_x][i_y][5],
+			datagrid[i_x][i_y][4],
+			datagrid[i_x][i_y][3],
+			datagrid[i_x][i_y][2],
+			datagrid[i_x][i_y][1],
+			datagrid[i_x][i_y][0]},
 		
 		{outstreams[(i/4)][(i%4)][2],
 			outstreams[(i/4)][(i%4)][1],
@@ -187,7 +200,7 @@ module block(
 	input [9:0] y,
 	input [9:0] x_off,
 	input [9:0] y_off,
-	input [9:0] dim,
+	input [9:0] dim, input[9:0] radius,
 	input [3:0] value,
 	output reg [3:0] pxout
 );
@@ -196,7 +209,27 @@ module block(
 	
 	always@(x or y or x_off or y_off or dim or value) begin
 		if (x>x_off && y>y_off && x<x_off+dim && y<y_off+dim) begin
-			pxout <= value;
+			rx = x-x_off;
+			ry = y-y_off;
+			if( (rx>radius & rx<dim-radius) || (ry>radius & ry<dim-radius) ) begin
+				//not corners
+				pxout <= value;
+			end
+			else if(rx < radius) begin
+				//left
+				if(ry<radius) begin
+					//topleft
+				end else begin
+					//bottomleft
+				end
+			end else begin
+				//right
+				if(ry<radius) begin
+					//topright
+				end else begin
+					//bottomright
+				end
+			end
 		end else begin
 			pxout <= 0;
 		end

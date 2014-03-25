@@ -3112,7 +3112,7 @@ ON
 # case_sensitive
 # source_file
 vgalab1.v
-863a5ec9493b6d9d21b4849b2f2ec1
+305325f956c6897844ff87807296ac
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -3132,7 +3132,7 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 }
 # user_parameter {
 blockdim
-64
+100
 PARAMETER_SIGNED_DEC
 DEF
 margins
@@ -3140,11 +3140,15 @@ margins
 PARAMETER_SIGNED_DEC
 DEF
 xoff
-40
+100
 PARAMETER_SIGNED_DEC
 DEF
 yoff
-0
+20
+PARAMETER_SIGNED_DEC
+DEF
+rectangle_radius
+3
 PARAMETER_SIGNED_DEC
 DEF
 }
@@ -3166,7 +3170,7 @@ ON
 # case_sensitive
 # source_file
 vgalab1.v
-863a5ec9493b6d9d21b4849b2f2ec1
+305325f956c6897844ff87807296ac
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -3185,22 +3189,22 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 250
 }
 # hierarchies {
-block:blockgen[0].b
-block:blockgen[1].b
-block:blockgen[2].b
-block:blockgen[3].b
-block:blockgen[4].b
-block:blockgen[5].b
-block:blockgen[6].b
-block:blockgen[7].b
-block:blockgen[8].b
-block:blockgen[9].b
-block:blockgen[10].b
-block:blockgen[11].b
-block:blockgen[12].b
-block:blockgen[13].b
-block:blockgen[14].b
-block:blockgen[15].b
+block:outer[0].inner[0].b
+block:outer[0].inner[1].b
+block:outer[0].inner[2].b
+block:outer[0].inner[3].b
+block:outer[1].inner[0].b
+block:outer[1].inner[1].b
+block:outer[1].inner[2].b
+block:outer[1].inner[3].b
+block:outer[2].inner[0].b
+block:outer[2].inner[1].b
+block:outer[2].inner[2].b
+block:outer[2].inner[3].b
+block:outer[3].inner[0].b
+block:outer[3].inner[1].b
+block:outer[3].inner[2].b
+block:outer[3].inner[3].b
 }
 # macro_sequence
 
@@ -3217,7 +3221,7 @@ ON
 # case_sensitive
 # source_file
 vgalab1.v
-863a5ec9493b6d9d21b4849b2f2ec1
+305325f956c6897844ff87807296ac
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT

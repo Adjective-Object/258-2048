@@ -6,13 +6,10 @@ module vgalab1(
   input [3:0] KEY,      //	Pushbutton[3:0]
 //	DPDT Switch
   input [17:0] SW,		//	Toggle Switch[17:0]
-//	7-SEG Display
-  output [6:0]	HEX0,HEX1,HEX2,HEX3,HEX4,HEX5,HEX6,HEX7,  // Seven Segment Digits
-//	LED
   output [8:0]	LEDG,  //	LED Green[8:0]
   output [17:0] LEDR,  //	LED Red[17:0]
 //	GPIO
- inout [35:0] GPIO_0,GPIO_1,	//	GPIO Connections
+
 //	TV Decoder
 //TD_DATA,    	//	TV Decoder Data bus 8 bits
 //TD_HS,		//	TV Decoder H_SYNC
@@ -29,9 +26,6 @@ module vgalab1(
   output [9:0] VGA_B   						//	VGA Blue[9:0]
 );
 
-//	All inout port turn to tri-state
-assign	GPIO_0		=	36'hzzzzzzzzz;
-assign	GPIO_1		=	36'hzzzzzzzzz;
 
 wire RST;
 assign RST = KEY[0];
@@ -42,19 +36,6 @@ Reset_Delay r0(	.iCLK(CLOCK_50),.oRESET(DLY_RST) );
 
 // Turn off green leds
 assign LEDG = 8'h00;
-
-wire [6:0] blank = 7'b111_1111;
-
-// blank unused 7-segment digits
-assign HEX0 = blank;
-assign HEX1 = blank;
-assign HEX2 = blank;
-assign HEX3 = blank;
-assign HEX4 = blank;
-assign HEX5 = blank;
-assign HEX6 = blank;
-assign HEX7 = blank;
-
 wire		VGA_CTRL_CLK;
 wire		AUD_CTRL_CLK;
 wire [9:0]	mVGA_R;
@@ -75,13 +56,12 @@ VGA_Audio_PLL 	p1 (
 
 
 //------------------------------------------
-
 reg [3:0] cout;
 reg datagrid [3:0] [3:0] [5:0];
 wire outstreams [3:0] [3:0] [3:0];
 
-reg [2:0] i_x, i_y;
-
+//initialize at blank grid
+reg [5:0] i_x, i_y;
 initial begin
 	i_x = 0;
 	repeat (4) begin
@@ -92,48 +72,73 @@ initial begin
 			datagrid[i_x][i_y][3],
 			datagrid[i_x][i_y][2],
 			datagrid[i_x][i_y][1],
-			datagrid[i_x][i_y][0]} <= 2;
+			datagrid[i_x][i_y][0]} <= 1;
 			i_y = i_y + 1;
 		end
 		i_x = i_x + 1;
 	end
 end
+//end initialization
 
-assign LEDR[5:0] = {datagrid[i_x][i_y][5],
-			datagrid[i_x][i_y][4],
-			datagrid[i_x][i_y][3],
-			datagrid[i_x][i_y][2],
-			datagrid[i_x][i_y][1],
-			datagrid[i_x][i_y][0]};
-			
-parameter blockdim = 64;
+//begin controls
+reg[2:0] XXX = 1,YYY = 1; 
+
+always @ (negedge KEY[3]) begin
+	XXX = XXX+1;
+	if (XXX > 3)
+		XXX <= 0;
+end
+
+always @ (negedge KEY[2]) begin
+	YYY = YYY+1;
+	if (YYY > 3)
+		YYY <= 0;
+end
+
+always @ (SW[5:0]) begin
+	{datagrid[XXX][YYY][5],
+			datagrid[XXX][YYY][4],
+			datagrid[XXX][YYY][3],
+			datagrid[XXX][YYY][2],
+			datagrid[XXX][YYY][1],
+			datagrid[XXX][YYY][0]} = SW[5:0];
+end
+
+
+assign LEDR [2:0] = XXX;
+assign LEDR [6:4] = YYY;
+//end controls
+
+parameter blockdim = 100;
 parameter margins = 10;
-parameter xoff = 40;
-parameter yoff = 0;
+parameter xoff = 100;
+parameter yoff = 20;
 parameter rectangle_radius = 3;
 
-genvar i;
+genvar g_x, g_y;
 generate
-for(i=0; i<16; i=i+1) begin:blockgen
-	block b(mCoord_X, mCoord_Y,
-	
-		xoff + margins + (blockdim + margins)*(i/4),
+for(g_x=0; g_x<4; g_x=g_x+1) begin:outer
+	for(g_y=0; g_y<4; g_y=g_y + 1)begin:inner
+		block b(mCoord_X, mCoord_Y,
 		
-		yoff + margins + (blockdim + margins)*(i%4),
-		
-		blockdim, rectangle_radius,
-		
-		{datagrid[i_x][i_y][5],
-			datagrid[i_x][i_y][4],
-			datagrid[i_x][i_y][3],
-			datagrid[i_x][i_y][2],
-			datagrid[i_x][i_y][1],
-			datagrid[i_x][i_y][0]},
-		
-		{outstreams[(i/4)][(i%4)][2],
-			outstreams[(i/4)][(i%4)][1],
-			outstreams[(i/4)][(i%4)][0],
-		});
+			xoff + margins + (blockdim + margins)*(g_x),
+			
+			yoff + margins + (blockdim + margins)*(g_y),
+			
+			blockdim, rectangle_radius,
+			
+			{datagrid[g_x][g_y][5],
+				datagrid[g_x][g_y][4],
+				datagrid[g_x][g_y][3],
+				datagrid[g_x][g_y][2],
+				datagrid[g_x][g_y][1],
+				datagrid[g_x][g_y][0]},
+			
+			{outstreams[g_x][g_y][2],
+				outstreams[g_x][g_y][1],
+				outstreams[g_x][g_y][0]}
+		);
+	end
 end
 endgenerate
 
@@ -209,35 +214,10 @@ module block(
 	
 	always@(x or y or x_off or y_off or dim or value) begin
 		if (x>x_off && y>y_off && x<x_off+dim && y<y_off+dim) begin
-			rx = x-x_off;
-			ry = y-y_off;
-			
-			pxout = 0;
-
-			if( (rx>radius & rx<dim-radius) || (ry>radius & ry<dim-radius) ) begin
-				//not corners
-				pxout <= value;
-			end
-
-			else if(rx < radius) begin
-				//left
-				if(ry<radius) begin
-					//topleft
-					if(rx>ry) pxout <=value;
-				end else begin
-					//bottomleft
-					if(rx<(ry-dim+radius)) pxout <=value;
-				end
-			end else begin
-				//right
-				if(ry<radius) begin
-					//topright
-					if(rx<ry-radius) pxout <= value;
-				end else begin
-					//bottomright
-					if(rx<(ry-dim+radius)) pxout <= value;
-				end
-			end
+			pxout <= value;
+		end else begin
+			pxout <= 0;
+		end
 	end
 
 endmodule
@@ -251,64 +231,30 @@ module color_blocker(
 		
 		always begin
 			case (color_class)
-				0:begin					v1= 10'hbb;
-					v2= 10'had;
-					v3= 10'ha0;
+				0:begin
+					v1= 10'h000;
+					v2= 10'h000;
+					v3= 10'h000;
 				end
 				1:begin
-					v1= 10'hee;
-					v2= 10'he4;
-					v3= 10'hda;
+					v1= 10'h000;
+					v2= 10'hFFF;
+					v3= 10'hFFF;
 				end
 				2:begin
-					v1= 10'hf2;
-					v2= 10'hb1;
-					v3= 10'h79;
+					v1= 10'hFFF;
+					v2= 10'h000;
+					v3= 10'hFFF;
 				end
 				3:begin
-					v1= 10'hf5;
-					v2= 10'h95;
-					v3= 10'h63;
+					v1= 10'hFFF;
+					v2= 10'hFFF;
+					v3= 10'h000;
 				end
 				4:begin
-					v1= 10'hf6;
-					v2= 10'h7c;
-					v3= 10'h5f;
-				end
-				5:begin
-					v1= 10'hf6;
-					v2= 10'h7c;
-					v3= 10'h5f;
-				end
-				6:begin
-					v1= 10'hf6;
-					v2= 10'h5e;
-					v3= 10'h3b;
-				end
-				7:begin
-					v1= 10'hed;
-					v2= 10'hcf;
-					v3= 10'h72;
-				end
-				8:begin
-					v1= 10'hed;
-					v2= 10'hcc;
-					v3= 10'h61;
-				end
-				9:begin
-					v1= 10'hed;
-					v2= 10'hc8;
-					v3= 10'h50;
-				end
-				10:begin
-					v1= 10'hed;
-					v2= 10'hc5;
-					v3= 10'h3f;
-				end
-				11:begin
-					v1= 10'hed;
-					v2= 10'hc2;
-					v3= 10'h2e;
+					v1= 10'h000;
+					v2= 10'h000;
+					v3= 10'hFFF;
 				end
 			endcase
 		end
@@ -316,5 +262,4 @@ module color_blocker(
 		assign r = v1;
 		assign g = v2;
 		assign b = v3;
-		
 endmodule

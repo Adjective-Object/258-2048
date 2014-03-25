@@ -3,98 +3,120 @@ CLOCK_50 => CLOCK_50.IN1
 CLOCK_27 => CLOCK_27.IN1
 KEY[0] => comb.IN1
 KEY[1] => ~NO_FANOUT~
-KEY[2] => ~NO_FANOUT~
-KEY[3] => ~NO_FANOUT~
-SW[0] => LEDR[0].DATAIN
-SW[1] => LEDR[1].DATAIN
-SW[2] => LEDR[2].DATAIN
-SW[3] => LEDR[3].DATAIN
-SW[4] => LEDR[4].DATAIN
-SW[5] => LEDR[5].DATAIN
-SW[6] => LEDR[6].DATAIN
-SW[7] => LEDR[7].DATAIN
-SW[8] => LEDR[8].DATAIN
-SW[9] => LEDR[9].DATAIN
-SW[10] => LEDR[10].DATAIN
-SW[11] => LEDR[11].DATAIN
-SW[12] => LEDR[12].DATAIN
-SW[13] => LEDR[13].DATAIN
-SW[14] => LEDR[14].DATAIN
-SW[15] => LEDR[15].DATAIN
-SW[16] => LEDR[16].DATAIN
-SW[17] => LEDR[17].DATAIN
-GPIO_0[0] <> GPIO_0[0]
-GPIO_0[1] <> GPIO_0[1]
-GPIO_0[2] <> GPIO_0[2]
-GPIO_0[3] <> GPIO_0[3]
-GPIO_0[4] <> GPIO_0[4]
-GPIO_0[5] <> GPIO_0[5]
-GPIO_0[6] <> GPIO_0[6]
-GPIO_0[7] <> GPIO_0[7]
-GPIO_0[8] <> GPIO_0[8]
-GPIO_0[9] <> GPIO_0[9]
-GPIO_0[10] <> GPIO_0[10]
-GPIO_0[11] <> GPIO_0[11]
-GPIO_0[12] <> GPIO_0[12]
-GPIO_0[13] <> GPIO_0[13]
-GPIO_0[14] <> GPIO_0[14]
-GPIO_0[15] <> GPIO_0[15]
-GPIO_0[16] <> GPIO_0[16]
-GPIO_0[17] <> GPIO_0[17]
-GPIO_0[18] <> GPIO_0[18]
-GPIO_0[19] <> GPIO_0[19]
-GPIO_0[20] <> GPIO_0[20]
-GPIO_0[21] <> GPIO_0[21]
-GPIO_0[22] <> GPIO_0[22]
-GPIO_0[23] <> GPIO_0[23]
-GPIO_0[24] <> GPIO_0[24]
-GPIO_0[25] <> GPIO_0[25]
-GPIO_0[26] <> GPIO_0[26]
-GPIO_0[27] <> GPIO_0[27]
-GPIO_0[28] <> GPIO_0[28]
-GPIO_0[29] <> GPIO_0[29]
-GPIO_0[30] <> GPIO_0[30]
-GPIO_0[31] <> GPIO_0[31]
-GPIO_0[32] <> GPIO_0[32]
-GPIO_0[33] <> GPIO_0[33]
-GPIO_0[34] <> GPIO_0[34]
-GPIO_0[35] <> GPIO_0[35]
-GPIO_1[0] <> GPIO_1[0]
-GPIO_1[1] <> GPIO_1[1]
-GPIO_1[2] <> GPIO_1[2]
-GPIO_1[3] <> GPIO_1[3]
-GPIO_1[4] <> GPIO_1[4]
-GPIO_1[5] <> GPIO_1[5]
-GPIO_1[6] <> GPIO_1[6]
-GPIO_1[7] <> GPIO_1[7]
-GPIO_1[8] <> GPIO_1[8]
-GPIO_1[9] <> GPIO_1[9]
-GPIO_1[10] <> GPIO_1[10]
-GPIO_1[11] <> GPIO_1[11]
-GPIO_1[12] <> GPIO_1[12]
-GPIO_1[13] <> GPIO_1[13]
-GPIO_1[14] <> GPIO_1[14]
-GPIO_1[15] <> GPIO_1[15]
-GPIO_1[16] <> GPIO_1[16]
-GPIO_1[17] <> GPIO_1[17]
-GPIO_1[18] <> GPIO_1[18]
-GPIO_1[19] <> GPIO_1[19]
-GPIO_1[20] <> GPIO_1[20]
-GPIO_1[21] <> GPIO_1[21]
-GPIO_1[22] <> GPIO_1[22]
-GPIO_1[23] <> GPIO_1[23]
-GPIO_1[24] <> GPIO_1[24]
-GPIO_1[25] <> GPIO_1[25]
-GPIO_1[26] <> GPIO_1[26]
-GPIO_1[27] <> GPIO_1[27]
-GPIO_1[28] <> GPIO_1[28]
-GPIO_1[29] <> GPIO_1[29]
-GPIO_1[30] <> GPIO_1[30]
-GPIO_1[31] <> GPIO_1[31]
-GPIO_1[32] <> GPIO_1[32]
-GPIO_1[33] <> GPIO_1[33]
-GPIO_1[34] <> GPIO_1[34]
-GPIO_1[35] <> GPIO_1[35]
+KEY[2] => YYY[0].CLK
+KEY[2] => YYY[1].CLK
+KEY[2] => YYY[2].CLK
+KEY[3] => XXX[0].CLK
+KEY[3] => XXX[1].CLK
+KEY[3] => XXX[2].CLK
+SW[0] => datagrid[0][0][0].DATAIN
+SW[0] => datagrid[0][1][0].DATAIN
+SW[0] => datagrid[0][2][0].DATAIN
+SW[0] => datagrid[0][3][0].DATAIN
+SW[0] => datagrid[1][0][0].DATAIN
+SW[0] => datagrid[1][1][0].DATAIN
+SW[0] => datagrid[1][2][0].DATAIN
+SW[0] => datagrid[1][3][0].DATAIN
+SW[0] => datagrid[2][0][0].DATAIN
+SW[0] => datagrid[2][1][0].DATAIN
+SW[0] => datagrid[2][2][0].DATAIN
+SW[0] => datagrid[2][3][0].DATAIN
+SW[0] => datagrid[3][0][0].DATAIN
+SW[0] => datagrid[3][1][0].DATAIN
+SW[0] => datagrid[3][2][0].DATAIN
+SW[0] => datagrid[3][3][0].DATAIN
+SW[1] => datagrid[0][0][1].DATAIN
+SW[1] => datagrid[0][1][1].DATAIN
+SW[1] => datagrid[0][2][1].DATAIN
+SW[1] => datagrid[0][3][1].DATAIN
+SW[1] => datagrid[1][0][1].DATAIN
+SW[1] => datagrid[1][1][1].DATAIN
+SW[1] => datagrid[1][2][1].DATAIN
+SW[1] => datagrid[1][3][1].DATAIN
+SW[1] => datagrid[2][0][1].DATAIN
+SW[1] => datagrid[2][1][1].DATAIN
+SW[1] => datagrid[2][2][1].DATAIN
+SW[1] => datagrid[2][3][1].DATAIN
+SW[1] => datagrid[3][0][1].DATAIN
+SW[1] => datagrid[3][1][1].DATAIN
+SW[1] => datagrid[3][2][1].DATAIN
+SW[1] => datagrid[3][3][1].DATAIN
+SW[2] => datagrid[0][0][2].DATAIN
+SW[2] => datagrid[0][1][2].DATAIN
+SW[2] => datagrid[0][2][2].DATAIN
+SW[2] => datagrid[0][3][2].DATAIN
+SW[2] => datagrid[1][0][2].DATAIN
+SW[2] => datagrid[1][1][2].DATAIN
+SW[2] => datagrid[1][2][2].DATAIN
+SW[2] => datagrid[1][3][2].DATAIN
+SW[2] => datagrid[2][0][2].DATAIN
+SW[2] => datagrid[2][1][2].DATAIN
+SW[2] => datagrid[2][2][2].DATAIN
+SW[2] => datagrid[2][3][2].DATAIN
+SW[2] => datagrid[3][0][2].DATAIN
+SW[2] => datagrid[3][1][2].DATAIN
+SW[2] => datagrid[3][2][2].DATAIN
+SW[2] => datagrid[3][3][2].DATAIN
+SW[3] => datagrid[0][0][3].DATAIN
+SW[3] => datagrid[0][1][3].DATAIN
+SW[3] => datagrid[0][2][3].DATAIN
+SW[3] => datagrid[0][3][3].DATAIN
+SW[3] => datagrid[1][0][3].DATAIN
+SW[3] => datagrid[1][1][3].DATAIN
+SW[3] => datagrid[1][2][3].DATAIN
+SW[3] => datagrid[1][3][3].DATAIN
+SW[3] => datagrid[2][0][3].DATAIN
+SW[3] => datagrid[2][1][3].DATAIN
+SW[3] => datagrid[2][2][3].DATAIN
+SW[3] => datagrid[2][3][3].DATAIN
+SW[3] => datagrid[3][0][3].DATAIN
+SW[3] => datagrid[3][1][3].DATAIN
+SW[3] => datagrid[3][2][3].DATAIN
+SW[3] => datagrid[3][3][3].DATAIN
+SW[4] => datagrid[0][0][4].DATAIN
+SW[4] => datagrid[0][1][4].DATAIN
+SW[4] => datagrid[0][2][4].DATAIN
+SW[4] => datagrid[0][3][4].DATAIN
+SW[4] => datagrid[1][0][4].DATAIN
+SW[4] => datagrid[1][1][4].DATAIN
+SW[4] => datagrid[1][2][4].DATAIN
+SW[4] => datagrid[1][3][4].DATAIN
+SW[4] => datagrid[2][0][4].DATAIN
+SW[4] => datagrid[2][1][4].DATAIN
+SW[4] => datagrid[2][2][4].DATAIN
+SW[4] => datagrid[2][3][4].DATAIN
+SW[4] => datagrid[3][0][4].DATAIN
+SW[4] => datagrid[3][1][4].DATAIN
+SW[4] => datagrid[3][2][4].DATAIN
+SW[4] => datagrid[3][3][4].DATAIN
+SW[5] => datagrid[0][0][5].DATAIN
+SW[5] => datagrid[0][1][5].DATAIN
+SW[5] => datagrid[0][2][5].DATAIN
+SW[5] => datagrid[0][3][5].DATAIN
+SW[5] => datagrid[1][0][5].DATAIN
+SW[5] => datagrid[1][1][5].DATAIN
+SW[5] => datagrid[1][2][5].DATAIN
+SW[5] => datagrid[1][3][5].DATAIN
+SW[5] => datagrid[2][0][5].DATAIN
+SW[5] => datagrid[2][1][5].DATAIN
+SW[5] => datagrid[2][2][5].DATAIN
+SW[5] => datagrid[2][3][5].DATAIN
+SW[5] => datagrid[3][0][5].DATAIN
+SW[5] => datagrid[3][1][5].DATAIN
+SW[5] => datagrid[3][2][5].DATAIN
+SW[5] => datagrid[3][3][5].DATAIN
+SW[6] => ~NO_FANOUT~
+SW[7] => ~NO_FANOUT~
+SW[8] => ~NO_FANOUT~
+SW[9] => ~NO_FANOUT~
+SW[10] => ~NO_FANOUT~
+SW[11] => ~NO_FANOUT~
+SW[12] => ~NO_FANOUT~
+SW[13] => ~NO_FANOUT~
+SW[14] => ~NO_FANOUT~
+SW[15] => ~NO_FANOUT~
+SW[16] => ~NO_FANOUT~
+SW[17] => ~NO_FANOUT~
 
 
 |vgalab1|Reset_Delay:r0
@@ -160,7 +182,7 @@ configupdate => ~NO_FANOUT~
 fbmimicbidir <> <GND>
 
 
-|vgalab1|block:blockgen[0].b
+|vgalab1|block:outer[0].inner[0].b
 x[0] => LessThan0.IN10
 x[0] => LessThan2.IN20
 x[1] => LessThan0.IN9
@@ -261,13 +283,23 @@ dim[8] => Add0.IN12
 dim[8] => Add1.IN12
 dim[9] => Add0.IN11
 dim[9] => Add1.IN11
+radius[0] => ~NO_FANOUT~
+radius[1] => ~NO_FANOUT~
+radius[2] => ~NO_FANOUT~
+radius[3] => ~NO_FANOUT~
+radius[4] => ~NO_FANOUT~
+radius[5] => ~NO_FANOUT~
+radius[6] => ~NO_FANOUT~
+radius[7] => ~NO_FANOUT~
+radius[8] => ~NO_FANOUT~
+radius[9] => ~NO_FANOUT~
 value[0] => pxout.DATAB
 value[1] => pxout.DATAB
 value[2] => pxout.DATAB
 value[3] => pxout.DATAB
 
 
-|vgalab1|block:blockgen[1].b
+|vgalab1|block:outer[0].inner[1].b
 x[0] => LessThan0.IN10
 x[0] => LessThan2.IN20
 x[1] => LessThan0.IN9
@@ -368,13 +400,23 @@ dim[8] => Add0.IN12
 dim[8] => Add1.IN12
 dim[9] => Add0.IN11
 dim[9] => Add1.IN11
+radius[0] => ~NO_FANOUT~
+radius[1] => ~NO_FANOUT~
+radius[2] => ~NO_FANOUT~
+radius[3] => ~NO_FANOUT~
+radius[4] => ~NO_FANOUT~
+radius[5] => ~NO_FANOUT~
+radius[6] => ~NO_FANOUT~
+radius[7] => ~NO_FANOUT~
+radius[8] => ~NO_FANOUT~
+radius[9] => ~NO_FANOUT~
 value[0] => pxout.DATAB
 value[1] => pxout.DATAB
 value[2] => pxout.DATAB
 value[3] => pxout.DATAB
 
 
-|vgalab1|block:blockgen[2].b
+|vgalab1|block:outer[0].inner[2].b
 x[0] => LessThan0.IN10
 x[0] => LessThan2.IN20
 x[1] => LessThan0.IN9
@@ -475,13 +517,23 @@ dim[8] => Add0.IN12
 dim[8] => Add1.IN12
 dim[9] => Add0.IN11
 dim[9] => Add1.IN11
+radius[0] => ~NO_FANOUT~
+radius[1] => ~NO_FANOUT~
+radius[2] => ~NO_FANOUT~
+radius[3] => ~NO_FANOUT~
+radius[4] => ~NO_FANOUT~
+radius[5] => ~NO_FANOUT~
+radius[6] => ~NO_FANOUT~
+radius[7] => ~NO_FANOUT~
+radius[8] => ~NO_FANOUT~
+radius[9] => ~NO_FANOUT~
 value[0] => pxout.DATAB
 value[1] => pxout.DATAB
 value[2] => pxout.DATAB
 value[3] => pxout.DATAB
 
 
-|vgalab1|block:blockgen[3].b
+|vgalab1|block:outer[0].inner[3].b
 x[0] => LessThan0.IN10
 x[0] => LessThan2.IN20
 x[1] => LessThan0.IN9
@@ -582,13 +634,23 @@ dim[8] => Add0.IN12
 dim[8] => Add1.IN12
 dim[9] => Add0.IN11
 dim[9] => Add1.IN11
+radius[0] => ~NO_FANOUT~
+radius[1] => ~NO_FANOUT~
+radius[2] => ~NO_FANOUT~
+radius[3] => ~NO_FANOUT~
+radius[4] => ~NO_FANOUT~
+radius[5] => ~NO_FANOUT~
+radius[6] => ~NO_FANOUT~
+radius[7] => ~NO_FANOUT~
+radius[8] => ~NO_FANOUT~
+radius[9] => ~NO_FANOUT~
 value[0] => pxout.DATAB
 value[1] => pxout.DATAB
 value[2] => pxout.DATAB
 value[3] => pxout.DATAB
 
 
-|vgalab1|block:blockgen[4].b
+|vgalab1|block:outer[1].inner[0].b
 x[0] => LessThan0.IN10
 x[0] => LessThan2.IN20
 x[1] => LessThan0.IN9
@@ -689,13 +751,23 @@ dim[8] => Add0.IN12
 dim[8] => Add1.IN12
 dim[9] => Add0.IN11
 dim[9] => Add1.IN11
+radius[0] => ~NO_FANOUT~
+radius[1] => ~NO_FANOUT~
+radius[2] => ~NO_FANOUT~
+radius[3] => ~NO_FANOUT~
+radius[4] => ~NO_FANOUT~
+radius[5] => ~NO_FANOUT~
+radius[6] => ~NO_FANOUT~
+radius[7] => ~NO_FANOUT~
+radius[8] => ~NO_FANOUT~
+radius[9] => ~NO_FANOUT~
 value[0] => pxout.DATAB
 value[1] => pxout.DATAB
 value[2] => pxout.DATAB
 value[3] => pxout.DATAB
 
 
-|vgalab1|block:blockgen[5].b
+|vgalab1|block:outer[1].inner[1].b
 x[0] => LessThan0.IN10
 x[0] => LessThan2.IN20
 x[1] => LessThan0.IN9
@@ -796,13 +868,23 @@ dim[8] => Add0.IN12
 dim[8] => Add1.IN12
 dim[9] => Add0.IN11
 dim[9] => Add1.IN11
+radius[0] => ~NO_FANOUT~
+radius[1] => ~NO_FANOUT~
+radius[2] => ~NO_FANOUT~
+radius[3] => ~NO_FANOUT~
+radius[4] => ~NO_FANOUT~
+radius[5] => ~NO_FANOUT~
+radius[6] => ~NO_FANOUT~
+radius[7] => ~NO_FANOUT~
+radius[8] => ~NO_FANOUT~
+radius[9] => ~NO_FANOUT~
 value[0] => pxout.DATAB
 value[1] => pxout.DATAB
 value[2] => pxout.DATAB
 value[3] => pxout.DATAB
 
 
-|vgalab1|block:blockgen[6].b
+|vgalab1|block:outer[1].inner[2].b
 x[0] => LessThan0.IN10
 x[0] => LessThan2.IN20
 x[1] => LessThan0.IN9
@@ -903,13 +985,23 @@ dim[8] => Add0.IN12
 dim[8] => Add1.IN12
 dim[9] => Add0.IN11
 dim[9] => Add1.IN11
+radius[0] => ~NO_FANOUT~
+radius[1] => ~NO_FANOUT~
+radius[2] => ~NO_FANOUT~
+radius[3] => ~NO_FANOUT~
+radius[4] => ~NO_FANOUT~
+radius[5] => ~NO_FANOUT~
+radius[6] => ~NO_FANOUT~
+radius[7] => ~NO_FANOUT~
+radius[8] => ~NO_FANOUT~
+radius[9] => ~NO_FANOUT~
 value[0] => pxout.DATAB
 value[1] => pxout.DATAB
 value[2] => pxout.DATAB
 value[3] => pxout.DATAB
 
 
-|vgalab1|block:blockgen[7].b
+|vgalab1|block:outer[1].inner[3].b
 x[0] => LessThan0.IN10
 x[0] => LessThan2.IN20
 x[1] => LessThan0.IN9
@@ -1010,13 +1102,23 @@ dim[8] => Add0.IN12
 dim[8] => Add1.IN12
 dim[9] => Add0.IN11
 dim[9] => Add1.IN11
+radius[0] => ~NO_FANOUT~
+radius[1] => ~NO_FANOUT~
+radius[2] => ~NO_FANOUT~
+radius[3] => ~NO_FANOUT~
+radius[4] => ~NO_FANOUT~
+radius[5] => ~NO_FANOUT~
+radius[6] => ~NO_FANOUT~
+radius[7] => ~NO_FANOUT~
+radius[8] => ~NO_FANOUT~
+radius[9] => ~NO_FANOUT~
 value[0] => pxout.DATAB
 value[1] => pxout.DATAB
 value[2] => pxout.DATAB
 value[3] => pxout.DATAB
 
 
-|vgalab1|block:blockgen[8].b
+|vgalab1|block:outer[2].inner[0].b
 x[0] => LessThan0.IN10
 x[0] => LessThan2.IN20
 x[1] => LessThan0.IN9
@@ -1117,13 +1219,23 @@ dim[8] => Add0.IN12
 dim[8] => Add1.IN12
 dim[9] => Add0.IN11
 dim[9] => Add1.IN11
+radius[0] => ~NO_FANOUT~
+radius[1] => ~NO_FANOUT~
+radius[2] => ~NO_FANOUT~
+radius[3] => ~NO_FANOUT~
+radius[4] => ~NO_FANOUT~
+radius[5] => ~NO_FANOUT~
+radius[6] => ~NO_FANOUT~
+radius[7] => ~NO_FANOUT~
+radius[8] => ~NO_FANOUT~
+radius[9] => ~NO_FANOUT~
 value[0] => pxout.DATAB
 value[1] => pxout.DATAB
 value[2] => pxout.DATAB
 value[3] => pxout.DATAB
 
 
-|vgalab1|block:blockgen[9].b
+|vgalab1|block:outer[2].inner[1].b
 x[0] => LessThan0.IN10
 x[0] => LessThan2.IN20
 x[1] => LessThan0.IN9
@@ -1224,13 +1336,23 @@ dim[8] => Add0.IN12
 dim[8] => Add1.IN12
 dim[9] => Add0.IN11
 dim[9] => Add1.IN11
+radius[0] => ~NO_FANOUT~
+radius[1] => ~NO_FANOUT~
+radius[2] => ~NO_FANOUT~
+radius[3] => ~NO_FANOUT~
+radius[4] => ~NO_FANOUT~
+radius[5] => ~NO_FANOUT~
+radius[6] => ~NO_FANOUT~
+radius[7] => ~NO_FANOUT~
+radius[8] => ~NO_FANOUT~
+radius[9] => ~NO_FANOUT~
 value[0] => pxout.DATAB
 value[1] => pxout.DATAB
 value[2] => pxout.DATAB
 value[3] => pxout.DATAB
 
 
-|vgalab1|block:blockgen[10].b
+|vgalab1|block:outer[2].inner[2].b
 x[0] => LessThan0.IN10
 x[0] => LessThan2.IN20
 x[1] => LessThan0.IN9
@@ -1331,13 +1453,23 @@ dim[8] => Add0.IN12
 dim[8] => Add1.IN12
 dim[9] => Add0.IN11
 dim[9] => Add1.IN11
+radius[0] => ~NO_FANOUT~
+radius[1] => ~NO_FANOUT~
+radius[2] => ~NO_FANOUT~
+radius[3] => ~NO_FANOUT~
+radius[4] => ~NO_FANOUT~
+radius[5] => ~NO_FANOUT~
+radius[6] => ~NO_FANOUT~
+radius[7] => ~NO_FANOUT~
+radius[8] => ~NO_FANOUT~
+radius[9] => ~NO_FANOUT~
 value[0] => pxout.DATAB
 value[1] => pxout.DATAB
 value[2] => pxout.DATAB
 value[3] => pxout.DATAB
 
 
-|vgalab1|block:blockgen[11].b
+|vgalab1|block:outer[2].inner[3].b
 x[0] => LessThan0.IN10
 x[0] => LessThan2.IN20
 x[1] => LessThan0.IN9
@@ -1438,13 +1570,23 @@ dim[8] => Add0.IN12
 dim[8] => Add1.IN12
 dim[9] => Add0.IN11
 dim[9] => Add1.IN11
+radius[0] => ~NO_FANOUT~
+radius[1] => ~NO_FANOUT~
+radius[2] => ~NO_FANOUT~
+radius[3] => ~NO_FANOUT~
+radius[4] => ~NO_FANOUT~
+radius[5] => ~NO_FANOUT~
+radius[6] => ~NO_FANOUT~
+radius[7] => ~NO_FANOUT~
+radius[8] => ~NO_FANOUT~
+radius[9] => ~NO_FANOUT~
 value[0] => pxout.DATAB
 value[1] => pxout.DATAB
 value[2] => pxout.DATAB
 value[3] => pxout.DATAB
 
 
-|vgalab1|block:blockgen[12].b
+|vgalab1|block:outer[3].inner[0].b
 x[0] => LessThan0.IN10
 x[0] => LessThan2.IN20
 x[1] => LessThan0.IN9
@@ -1545,13 +1687,23 @@ dim[8] => Add0.IN12
 dim[8] => Add1.IN12
 dim[9] => Add0.IN11
 dim[9] => Add1.IN11
+radius[0] => ~NO_FANOUT~
+radius[1] => ~NO_FANOUT~
+radius[2] => ~NO_FANOUT~
+radius[3] => ~NO_FANOUT~
+radius[4] => ~NO_FANOUT~
+radius[5] => ~NO_FANOUT~
+radius[6] => ~NO_FANOUT~
+radius[7] => ~NO_FANOUT~
+radius[8] => ~NO_FANOUT~
+radius[9] => ~NO_FANOUT~
 value[0] => pxout.DATAB
 value[1] => pxout.DATAB
 value[2] => pxout.DATAB
 value[3] => pxout.DATAB
 
 
-|vgalab1|block:blockgen[13].b
+|vgalab1|block:outer[3].inner[1].b
 x[0] => LessThan0.IN10
 x[0] => LessThan2.IN20
 x[1] => LessThan0.IN9
@@ -1652,13 +1804,23 @@ dim[8] => Add0.IN12
 dim[8] => Add1.IN12
 dim[9] => Add0.IN11
 dim[9] => Add1.IN11
+radius[0] => ~NO_FANOUT~
+radius[1] => ~NO_FANOUT~
+radius[2] => ~NO_FANOUT~
+radius[3] => ~NO_FANOUT~
+radius[4] => ~NO_FANOUT~
+radius[5] => ~NO_FANOUT~
+radius[6] => ~NO_FANOUT~
+radius[7] => ~NO_FANOUT~
+radius[8] => ~NO_FANOUT~
+radius[9] => ~NO_FANOUT~
 value[0] => pxout.DATAB
 value[1] => pxout.DATAB
 value[2] => pxout.DATAB
 value[3] => pxout.DATAB
 
 
-|vgalab1|block:blockgen[14].b
+|vgalab1|block:outer[3].inner[2].b
 x[0] => LessThan0.IN10
 x[0] => LessThan2.IN20
 x[1] => LessThan0.IN9
@@ -1759,13 +1921,23 @@ dim[8] => Add0.IN12
 dim[8] => Add1.IN12
 dim[9] => Add0.IN11
 dim[9] => Add1.IN11
+radius[0] => ~NO_FANOUT~
+radius[1] => ~NO_FANOUT~
+radius[2] => ~NO_FANOUT~
+radius[3] => ~NO_FANOUT~
+radius[4] => ~NO_FANOUT~
+radius[5] => ~NO_FANOUT~
+radius[6] => ~NO_FANOUT~
+radius[7] => ~NO_FANOUT~
+radius[8] => ~NO_FANOUT~
+radius[9] => ~NO_FANOUT~
 value[0] => pxout.DATAB
 value[1] => pxout.DATAB
 value[2] => pxout.DATAB
 value[3] => pxout.DATAB
 
 
-|vgalab1|block:blockgen[15].b
+|vgalab1|block:outer[3].inner[3].b
 x[0] => LessThan0.IN10
 x[0] => LessThan2.IN20
 x[1] => LessThan0.IN9
@@ -1866,6 +2038,16 @@ dim[8] => Add0.IN12
 dim[8] => Add1.IN12
 dim[9] => Add0.IN11
 dim[9] => Add1.IN11
+radius[0] => ~NO_FANOUT~
+radius[1] => ~NO_FANOUT~
+radius[2] => ~NO_FANOUT~
+radius[3] => ~NO_FANOUT~
+radius[4] => ~NO_FANOUT~
+radius[5] => ~NO_FANOUT~
+radius[6] => ~NO_FANOUT~
+radius[7] => ~NO_FANOUT~
+radius[8] => ~NO_FANOUT~
+radius[9] => ~NO_FANOUT~
 value[0] => pxout.DATAB
 value[1] => pxout.DATAB
 value[2] => pxout.DATAB

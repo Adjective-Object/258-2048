@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Thu Mar 20 16:24:39 2014
+Analysis & Synthesis Status : Successful - Mon Mar 24 20:21:34 2014
 Quartus II 64-Bit Version : 11.1 Build 259 01/25/2012 SP 2 SJ Full Version
 Revision Name : vgalab1
 Top-level Entity Name : vgalab1
 Family : Cyclone II
-Total logic elements : 119
-    Total combinational functions : 119
-    Dedicated logic registers : 43
-Total registers : 43
-Total pins : 215
+Total logic elements : 289
+    Total combinational functions : 289
+    Dedicated logic registers : 47
+Total registers : 47
+Total pins : 87
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

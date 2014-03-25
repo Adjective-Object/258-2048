@@ -1,7 +1,7 @@
 <sld_project_info>
   <file_info>
-    <file checksum="0x0030FC52" device="EP2C35F672C6" path="//SRVA/Homes$/aishihan/Desktop/hng/vgalab1.sof" usercode="0x0030FC52"/>
-    <file checksum="0x1C74D64D" device="EPCS16" path="//SRVA/Homes$/aishihan/Desktop/hng/vgalab1.pof" usercode="0x00000000"/>
+    <file checksum="0x0033D861" device="EP2C35F672C6" path="//SRVA/Homes$/aishihan/Desktop/Old Stuff/hngb/vgalab1.sof" usercode="0x0033D861"/>
+    <file checksum="0x1C726AD9" device="EPCS16" path="//SRVA/Homes$/aishihan/Desktop/Old Stuff/hngb/vgalab1.pof" usercode="0x00000000"/>
   </file_info>
   <hub_info ir_width="0" node_count="0"/>
   <node_info/>

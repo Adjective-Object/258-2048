@@ -1,5 +1,5 @@
 Flow report for vgalab1
-Thu Mar 20 16:25:06 2014
+Mon Mar 24 20:22:08 2014
 Quartus II 64-Bit Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Full Version
 
 
@@ -38,18 +38,18 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +------------------------------------+------------------------------------------------+
-; Flow Status                        ; Successful - Thu Mar 20 16:25:05 2014          ;
+; Flow Status                        ; Successful - Mon Mar 24 20:22:03 2014          ;
 ; Quartus II 64-Bit Version          ; 11.1 Build 259 01/25/2012 SP 2 SJ Full Version ;
 ; Revision Name                      ; vgalab1                                        ;
 ; Top-level Entity Name              ; vgalab1                                        ;
 ; Family                             ; Cyclone II                                     ;
 ; Device                             ; EP2C35F672C6                                   ;
 ; Timing Models                      ; Final                                          ;
-; Total logic elements               ; 119 / 33,216 ( < 1 % )                         ;
-;     Total combinational functions  ; 119 / 33,216 ( < 1 % )                         ;
-;     Dedicated logic registers      ; 43 / 33,216 ( < 1 % )                          ;
-; Total registers                    ; 43                                             ;
-; Total pins                         ; 215 / 475 ( 45 % )                             ;
+; Total logic elements               ; 289 / 33,216 ( < 1 % )                         ;
+;     Total combinational functions  ; 289 / 33,216 ( < 1 % )                         ;
+;     Dedicated logic registers      ; 47 / 33,216 ( < 1 % )                          ;
+; Total registers                    ; 47                                             ;
+; Total pins                         ; 87 / 475 ( 18 % )                              ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0 / 483,840 ( 0 % )                            ;
 ; Embedded Multiplier 9-bit elements ; 0 / 70 ( 0 % )                                 ;
@@ -62,7 +62,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/20/2014 16:24:28 ;
+; Start date & time ; 03/24/2014 20:21:22 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; vgalab1             ;
 +-------------------+---------------------+
@@ -73,7 +73,7 @@ applicable agreement for further details.
 +-------------------------------------+------------------------------+---------------+-------------+------------+
 ; Assignment Name                     ; Value                        ; Default Value ; Entity Name ; Section Id ;
 +-------------------------------------+------------------------------+---------------+-------------+------------+
-; COMPILER_SIGNATURE_ID               ; 156980626366.139534706703504 ; --            ; --          ; --         ;
+; COMPILER_SIGNATURE_ID               ; 156980626079.139570688100572 ; --            ; --          ; --         ;
 ; OPTIMIZE_MULTI_CORNER_TIMING        ; On                           ; Off           ; --          ; --         ;
 ; PARTITION_COLOR                     ; 2147039                      ; --            ; --          ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING        ; --            ; --          ; Top        ;
@@ -87,11 +87,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:11     ; 1.0                     ; 394 MB              ; 00:00:07                           ;
-; Fitter                    ; 00:00:09     ; 2.0                     ; 556 MB              ; 00:00:11                           ;
-; Assembler                 ; 00:00:06     ; 1.0                     ; 414 MB              ; 00:00:03                           ;
-; TimeQuest Timing Analyzer ; 00:00:07     ; 1.0                     ; 361 MB              ; 00:00:03                           ;
-; Total                     ; 00:00:33     ; --                      ; --                  ; 00:00:24                           ;
+; Analysis & Synthesis      ; 00:00:12     ; 1.0                     ; 396 MB              ; 00:00:07                           ;
+; Fitter                    ; 00:00:13     ; 1.8                     ; 557 MB              ; 00:00:14                           ;
+; Assembler                 ; 00:00:05     ; 1.0                     ; 414 MB              ; 00:00:03                           ;
+; TimeQuest Timing Analyzer ; 00:00:09     ; 1.0                     ; 365 MB              ; 00:00:04                           ;
+; Total                     ; 00:00:39     ; --                      ; --                  ; 00:00:28                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -100,10 +100,10 @@ applicable agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; BA3155WS01       ; Windows 7 ; 6.1        ; x86_64         ;
-; Fitter                    ; BA3155WS01       ; Windows 7 ; 6.1        ; x86_64         ;
-; Assembler                 ; BA3155WS01       ; Windows 7 ; 6.1        ; x86_64         ;
-; TimeQuest Timing Analyzer ; BA3155WS01       ; Windows 7 ; 6.1        ; x86_64         ;
+; Analysis & Synthesis      ; BA3145WS24       ; Windows 7 ; 6.1        ; x86_64         ;
+; Fitter                    ; BA3145WS24       ; Windows 7 ; 6.1        ; x86_64         ;
+; Assembler                 ; BA3145WS24       ; Windows 7 ; 6.1        ; x86_64         ;
+; TimeQuest Timing Analyzer ; BA3145WS24       ; Windows 7 ; 6.1        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 

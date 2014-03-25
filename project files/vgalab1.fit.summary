@@ -1,15 +1,15 @@
-Fitter Status : Successful - Thu Mar 20 16:24:52 2014
+Fitter Status : Successful - Mon Mar 24 20:21:51 2014
 Quartus II 64-Bit Version : 11.1 Build 259 01/25/2012 SP 2 SJ Full Version
 Revision Name : vgalab1
 Top-level Entity Name : vgalab1
 Family : Cyclone II
 Device : EP2C35F672C6
 Timing Models : Final
-Total logic elements : 119 / 33,216 ( < 1 % )
-    Total combinational functions : 119 / 33,216 ( < 1 % )
-    Dedicated logic registers : 43 / 33,216 ( < 1 % )
-Total registers : 43
-Total pins : 215 / 475 ( 45 % )
+Total logic elements : 289 / 33,216 ( < 1 % )
+    Total combinational functions : 289 / 33,216 ( < 1 % )
+    Dedicated logic registers : 47 / 33,216 ( < 1 % )
+Total registers : 47
+Total pins : 87 / 475 ( 18 % )
 Total virtual pins : 0
 Total memory bits : 0 / 483,840 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 70 ( 0 % )

@@ -1,0 +1,205 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow Model Setup 'datagrid[0][0][0]'
+Slack : -21.416
+TNS   : -63.948
+
+Type  : Slow Model Setup 'CLOCK_50'
+Slack : -2.702
+TNS   : -51.007
+
+Type  : Slow Model Setup 'keyboard:kbd|keyboard_clk_filtered'
+Slack : -1.678
+TNS   : -29.250
+
+Type  : Slow Model Setup 'keyboard:kbd|clock'
+Slack : -0.733
+TNS   : -0.883
+
+Type  : Slow Model Setup 'KEY[2]'
+Slack : 0.206
+TNS   : 0.000
+
+Type  : Slow Model Setup 'KEY[3]'
+Slack : 0.379
+TNS   : 0.000
+
+Type  : Slow Model Setup 'p1|altpll_component|pll|clk[0]'
+Slack : 32.558
+TNS   : 0.000
+
+Type  : Slow Model Hold 'datagrid[0][0][0]'
+Slack : -20.994
+TNS   : -62.785
+
+Type  : Slow Model Hold 'KEY[3]'
+Slack : -2.971
+TNS   : -5.722
+
+Type  : Slow Model Hold 'CLOCK_50'
+Slack : -2.536
+TNS   : -2.536
+
+Type  : Slow Model Hold 'keyboard:kbd|clock'
+Slack : -2.060
+TNS   : -2.060
+
+Type  : Slow Model Hold 'KEY[2]'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Hold 'keyboard:kbd|keyboard_clk_filtered'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Hold 'p1|altpll_component|pll|clk[0]'
+Slack : 0.391
+TNS   : 0.000
+
+Type  : Slow Model Recovery 'p1|altpll_component|pll|clk[0]'
+Slack : -5.176
+TNS   : -108.783
+
+Type  : Slow Model Removal 'p1|altpll_component|pll|clk[0]'
+Slack : 4.487
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'datagrid[0][0][0]'
+Slack : -15.791
+TNS   : -1563.778
+
+Type  : Slow Model Minimum Pulse Width 'CLOCK_50'
+Slack : -1.380
+TNS   : -23.380
+
+Type  : Slow Model Minimum Pulse Width 'KEY[2]'
+Slack : -1.222
+TNS   : -3.222
+
+Type  : Slow Model Minimum Pulse Width 'KEY[3]'
+Slack : -1.222
+TNS   : -3.222
+
+Type  : Slow Model Minimum Pulse Width 'keyboard:kbd|keyboard_clk_filtered'
+Slack : -0.500
+TNS   : -22.000
+
+Type  : Slow Model Minimum Pulse Width 'keyboard:kbd|clock'
+Slack : -0.500
+TNS   : -9.000
+
+Type  : Slow Model Minimum Pulse Width 'XXX[0]'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'CLOCK_27'
+Slack : 18.518
+TNS   : 0.000
+
+Type  : Slow Model Minimum Pulse Width 'p1|altpll_component|pll|clk[0]'
+Slack : 18.841
+TNS   : 0.000
+
+Type  : Fast Model Setup 'datagrid[0][0][0]'
+Slack : -8.865
+TNS   : -26.454
+
+Type  : Fast Model Setup 'CLOCK_50'
+Slack : -0.766
+TNS   : -13.378
+
+Type  : Fast Model Setup 'keyboard:kbd|keyboard_clk_filtered'
+Slack : -0.277
+TNS   : -3.962
+
+Type  : Fast Model Setup 'keyboard:kbd|clock'
+Slack : 0.223
+TNS   : 0.000
+
+Type  : Fast Model Setup 'KEY[2]'
+Slack : 0.617
+TNS   : 0.000
+
+Type  : Fast Model Setup 'KEY[3]'
+Slack : 0.665
+TNS   : 0.000
+
+Type  : Fast Model Setup 'p1|altpll_component|pll|clk[0]'
+Slack : 36.346
+TNS   : 0.000
+
+Type  : Fast Model Hold 'datagrid[0][0][0]'
+Slack : -9.456
+TNS   : -28.288
+
+Type  : Fast Model Hold 'KEY[3]'
+Slack : -1.601
+TNS   : -3.129
+
+Type  : Fast Model Hold 'CLOCK_50'
+Slack : -1.580
+TNS   : -1.580
+
+Type  : Fast Model Hold 'keyboard:kbd|clock'
+Slack : -1.303
+TNS   : -1.303
+
+Type  : Fast Model Hold 'KEY[2]'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'keyboard:kbd|keyboard_clk_filtered'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Hold 'p1|altpll_component|pll|clk[0]'
+Slack : 0.215
+TNS   : 0.000
+
+Type  : Fast Model Recovery 'p1|altpll_component|pll|clk[0]'
+Slack : -3.008
+TNS   : -63.960
+
+Type  : Fast Model Removal 'p1|altpll_component|pll|clk[0]'
+Slack : 2.689
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'datagrid[0][0][0]'
+Slack : -6.578
+TNS   : -638.268
+
+Type  : Fast Model Minimum Pulse Width 'CLOCK_50'
+Slack : -1.380
+TNS   : -23.380
+
+Type  : Fast Model Minimum Pulse Width 'KEY[2]'
+Slack : -1.222
+TNS   : -3.222
+
+Type  : Fast Model Minimum Pulse Width 'KEY[3]'
+Slack : -1.222
+TNS   : -3.222
+
+Type  : Fast Model Minimum Pulse Width 'keyboard:kbd|keyboard_clk_filtered'
+Slack : -0.500
+TNS   : -22.000
+
+Type  : Fast Model Minimum Pulse Width 'keyboard:kbd|clock'
+Slack : -0.500
+TNS   : -9.000
+
+Type  : Fast Model Minimum Pulse Width 'XXX[0]'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'CLOCK_27'
+Slack : 18.518
+TNS   : 0.000
+
+Type  : Fast Model Minimum Pulse Width 'p1|altpll_component|pll|clk[0]'
+Slack : 18.841
+TNS   : 0.000
+
+------------------------------------------------------------

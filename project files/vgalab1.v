@@ -222,6 +222,120 @@ module block(
 
 endmodule
 
+parameter glyph_resolution = 1;
+
+
+
+parameter[5:0][2:0] glyph_panic = {
+	2'b111,
+	2'b111,
+	2'b111,	
+	2'b111,
+	2'b111,
+};
+parameter [5:0][2:0] glyph_0 = {
+	2'b111,
+	2'b101,
+	2'b101,	
+	2'b101,
+	2'b111,
+};
+
+parameter [5:0][2:0] glyph_1 = {
+	2'b010,
+	2'b010,
+	2'b010,	
+	2'b010,
+	2'b111,
+};
+
+parameter [5:0][2:0]glyph_2 = {
+	2'b111,
+	2'b001,
+	2'b111,	
+	2'b100,
+	2'b111,
+};
+
+parameter [5:0][2:0] glyph_3 = {
+	2'b111,
+	2'b001,
+	2'b111,	
+	2'b001,
+	2'b111,
+};
+
+parameter [5:0][2:0] glyph_4 = {
+	2'b101,
+	2'b101,
+	2'b111,	
+	2'b011,
+	2'b001,
+};
+
+
+parameter [5:0][2:0] glyph_5 = {
+	2'b111,
+	2'b100,
+	2'b111,	
+	2'b001,
+	2'b111,
+};
+
+parameter [5:0][2:0] glyph_6 = {
+	2'b111,
+	2'b101,
+	2'b111,	
+	2'b101,
+	2'b111,
+};
+
+parameter [5:0][2:0] glyph_8 = {
+	2'b111,
+	2'b101,
+	2'b111,	
+	2'b101,
+	2'b111,
+};
+
+parameter [9:0][5:0][2:0] glyphs = {
+	glyph_0,
+	glyph_1,
+	glyph_2,
+	glyph_3,
+	glyph_4,
+	glyph_5,
+	glyph_6,
+	glyph_panic,
+	glyph_8,
+	glyph_panic
+};
+
+module renderGlyph(
+	input[3:0][5:0] glyphData,
+	input[10:0] x,
+	input[10:0] y,
+	input[10:0] x_off,
+	input[10:0] y_off,
+
+	output[9:0] rin,
+	output[9:0] gin,
+	output[9:0] bin,
+	
+	output[9:0] r,
+	output[9:0] g,
+	output[9:0] b
+	)
+
+	always @ (x_off or y_off or renderGlyph) begin
+		if (glyphData[y+y_off][x+x_off]) begin
+			r = rin;
+			g = gin;
+			b = bin;
+		end
+	end
+endmodule
+
 module color_blocker(
 						output [9:0] r,
 						output [9:0] g,
@@ -255,6 +369,12 @@ module color_blocker(
 					v1= 10'h000;
 					v2= 10'h000;
 					v3= 10'hFFF;
+				end
+				default:begin
+					v1= 10'hFFF;
+					v2= 10'h000;
+					v3= 10'h000;
+				end
 				end
 			endcase
 		end
